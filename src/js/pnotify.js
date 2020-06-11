@@ -1,5 +1,4 @@
-import { error } from '@pnotify/core';
-import { defaults } from '@pnotify/core';
+import { error, defaults } from '@pnotify/core';
 
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';

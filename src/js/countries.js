@@ -27,17 +27,16 @@ function searchCountry(event) {
 }
 
 function typeOfMarkup(arr) {
-  console.log(arr);
   if (arr.length > 10) {
     errorMessage();
     return;
   }
 
   if (arr.length === 1) {
-    showCountryInfo(countries);
+    showCountryInfo(arr[0]);
     return;
   }
-  showListOfCountries(countries);
+  showListOfCountries(arr);
 }
 
 function showCountryInfo(country) {
@@ -53,30 +52,3 @@ function showListOfCountries(countries) {
 function clearListItems() {
   refs.countriesList.innerHTML = '';
 }
-
-/* PREVIOUS VERSION OF FUNCTIONS. IT"S WORK*/
-// function typeOfMarkup(arr) {
-//   if (arr.length > 10) {
-//     errorMessage();
-//     return;
-//   } else {
-//     arr.map(countries => {
-//       if (arr.length === 1) {
-//         showCountryInfo(countries);
-//       } else {
-//         showListOfCountries(countries);
-//       }
-//     });
-//   }
-// }
-
-// function showCountryInfo(country) {
-//   const template = countryInfo(country);
-//   refs.countriesList.insertAdjacentHTML('beforeend', template);
-// }
-
-// function showListOfCountries(countries) {
-//   const template = countriesList(countries);
-
-//   refs.countriesList.insertAdjacentHTML('beforeend', template);
-// }
